@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F2F2F2"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <!--        <VideoView-->
+        <SurfaceView
+            android:id="@+id/surface_view"
+            android:layout_width="fill_parent"
+            android:layout_height="290dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/DC_ImgBtn_GoHome"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="#F2F2F2"
+            android:src="@drawable/xml_go_home" />
+        <Button
+            android:id="@+id/DC_Button_IPC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/button_selector_p"
+            android:text="可见光"
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+        <Button
+            android:id="@+id/DC_Button_RED"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_selector_p"
+            android:text="热像仪"
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <!--        <Button-->
+        <!--            android:id="@+id/DC_Button_IPC"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="50dp"-->
+        <!--            android:background="#1E88E5"-->
+        <!--            android:text="@string/show_ipc"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textColor="#ffffff" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/DC_Button_RED"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:background="#1E88E5"-->
+        <!--            android:text="@string/show_red"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textColor="#ffffff" />-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#1E88E5" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="底盘控制"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:text="云台控制"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/Move_ctrl"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_Up1"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_up1" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_Down1"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_down1" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_Left1"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_left1" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_Right1"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_right1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/Head_ctrl"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_HeadUp"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_up1" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_HeadDown"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_down1" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_Reset"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="57dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_reset" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_HeadLeft"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_left1" />
+            <ImageButton
+                android:id="@+id/DC_ImgBtn_HeadRight"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="55dp"
+                android:background="#F2F2F2"
+                android:src="@drawable/xml_move_right1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_height="2px"
+        android:background="#1E88E5" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电量："
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/DC_TextViewShowElectricPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:text="100%"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="急停："
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/emergency_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="松开"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:padding="2dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CO2："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_co2"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VOC："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_voc"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="温度："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_temp"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="甲醛："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_hum"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PM2.5："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_pm25"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PM10："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_pm10"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PM1.0："
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/envirment_pm1_0"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:text="0.0"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
